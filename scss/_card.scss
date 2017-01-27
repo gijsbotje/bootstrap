@@ -175,9 +175,11 @@
 
 // Card image caps
 .card-img-top {
+  max-width: 100%;
   @include border-top-radius($card-border-radius-inner);
 }
 .card-img-bottom {
+  max-width: 100%;
   @include border-bottom-radius($card-border-radius-inner);
 }
 
