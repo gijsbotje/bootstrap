@@ -1004,6 +1004,23 @@ Custom checkboxes and radios are inline to start. Add a parent with class `.cust
 </div>
 {% endexample %}
 
+### switches
+
+A switch has the markup of a custom checkbox but uses the `.custom-switch` class to render a toggle switch. Switches also support the `disabled` attribute. 
+
+{% example html %}
+<label class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input">
+  <span class="custom-control-indicator"></span>
+  <span class="custom-control-description">Toggle this switch</span>
+</label>
+<label class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" disabled>
+  <span class="custom-control-indicator"></span>
+  <span class="custom-control-description">This switch is disabled</span>
+</label>
+{% endexample %}
+
 ### Select menu
 
 Custom `<select>` menus need only a custom class, `.custom-select` to trigger the custom styles.

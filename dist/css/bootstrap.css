@@ -1588,11 +1588,6 @@ pre code {
   opacity: 1;
 }
 
-.form-control::-moz-placeholder {
-  color: #868e96;
-  opacity: 1;
-}
-
 .form-control:-ms-input-placeholder {
   color: #868e96;
   opacity: 1;
@@ -2469,6 +2464,7 @@ fieldset[disabled] a.btn {
 
 .btn-link, .btn-link:focus, .btn-link:active {
   border-color: transparent;
+  box-shadow: none;
 }
 
 .btn-link:hover {
@@ -3036,6 +3032,31 @@ tbody.collapse.show {
 
 .custom-radio .custom-control-input:checked ~ .custom-control-indicator {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.custom-switch {
+  padding-left: 2.25rem;
+}
+
+.custom-switch .custom-control-indicator {
+  width: 1.75rem;
+  border-radius: 0.5rem;
+}
+
+.custom-switch .custom-control-indicator::before {
+  position: absolute;
+  top: 0.125rem;
+  left: 0.124rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  content: "";
+  background-color: #fff;
+  border-radius: 1rem;
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-indicator::before {
+  -webkit-transform: translateX(0.75rem);
+          transform: translateX(0.75rem);
 }
 
 .custom-controls-stacked {
@@ -3845,10 +3866,8 @@ tbody.collapse.show {
 @media (min-width: 576px) {
   .card-columns {
     -webkit-column-count: 3;
-       -moz-column-count: 3;
             column-count: 3;
     -webkit-column-gap: 1.25rem;
-       -moz-column-gap: 1.25rem;
             column-gap: 1.25rem;
   }
   .card-columns .card {

@@ -104,6 +104,32 @@
   }
 }
 
+// switches
+//
+// Tweak a few things for switches
+
+.custom-switch {
+  padding-left: $custom-control-gutter * 1.5;
+  .custom-control-indicator {
+    width: $custom-control-indicator-size * 1.75;
+    border-radius: $custom-control-indicator-size / 2;
+    &::before {
+      position: absolute;
+      top: $custom-control-indicator-size * .125;
+      left: $custom-control-indicator-size * .124;
+      width: $custom-control-indicator-size * .75;
+      height: $custom-control-indicator-size * .75;
+      content: "";
+      background-color: #fff;
+      border-radius: $custom-control-indicator-size;
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-indicator::before {
+    transform: translateX($custom-control-indicator-size * .75);
+  }
+}
+
 
 // Layout options
 //
