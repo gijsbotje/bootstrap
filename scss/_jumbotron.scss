@@ -3,6 +3,7 @@
   margin-bottom: $jumbotron-padding;
   background-color: $jumbotron-bg;
   @include border-radius($border-radius-lg);
+  @include color-yiq($jumbotron-bg);
 
   @include media-breakpoint-up(sm) {
     padding: ($jumbotron-padding * 2) $jumbotron-padding;
