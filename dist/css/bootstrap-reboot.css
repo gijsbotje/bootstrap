@@ -62,7 +62,6 @@ p {
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
@@ -131,14 +130,14 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #08A699;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-  color: #0056b3;
+  color: #045d56;
   text-decoration: underline;
 }
 
@@ -193,7 +192,6 @@ label,
 select,
 summary,
 textarea {
-  -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
 
@@ -340,4 +338,5 @@ template {
 [hidden] {
   display: none !important;
 }
+
 /*# sourceMappingURL=bootstrap-reboot.css.map */
