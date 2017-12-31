@@ -144,23 +144,28 @@
 
 .custom-switch {
   padding-left: $custom-control-gutter * 1.5;
-  .custom-control-indicator {
-    width: $custom-control-indicator-size * 1.75;
-    border-radius: $custom-control-indicator-size / 2;
+
+  .custom-control-label {
+
     &::before {
-      position: absolute;
-      top: $custom-control-indicator-size * .125;
-      left: $custom-control-indicator-size * .124;
-      width: $custom-control-indicator-size * .75;
-      height: $custom-control-indicator-size * .75;
-      content: "";
-      background-color: #fff;
-      border-radius: $custom-control-indicator-size;
+      width: $custom-switch-width;
+      border-radius: $custom-switch-indicator-border-radius;
+    }
+
+    &::after {
+      width: $custom-control-indicator-size * 1.75;
+      background-image: $custom-switch-indicator-icon;
+      background-position: left center;
+      background-size: $custom-control-indicator-size;
     }
   }
 
-  .custom-control-input:checked ~ .custom-control-indicator::before {
-    transform: translateX($custom-control-indicator-size * .75);
+  .custom-control-input:checked ~ .custom-control-label::after {
+    background-position: right center;
+  }
+
+  &-animated .custom-control-label::after {
+    transition: background-position .1s;
   }
 }
 

@@ -1018,16 +1018,25 @@ Custom checkboxes and radios can also be disabled. Add the `disabled` boolean at
 A switch has the markup of a custom checkbox but uses the `.custom-switch` class to render a toggle switch. Switches also support the `disabled` attribute. 
 
 {% example html %}
-<label class="custom-control custom-switch">
-  <input type="checkbox" class="custom-control-input">
-  <span class="custom-control-indicator"></span>
-  <span class="custom-control-description">Toggle this switch</span>
-</label>
-<label class="custom-control custom-switch">
-  <input type="checkbox" class="custom-control-input" disabled>
-  <span class="custom-control-indicator"></span>
-  <span class="custom-control-description">This switch is disabled</span>
-</label>
+<div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+  <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+</div>
+<div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" disabled id="customSwitch2">
+  <label class="custom-control-label" for="customSwitch2">Disabled switch element</label>
+</div>
+{% endexample %}
+
+#### Animated switch
+
+Optionally you can add the class `.custom-switch-animated` to add a transition to the indicator.
+
+{% example html %}
+<div class="custom-control custom-switch custom-switch-animated">
+  <input type="checkbox" class="custom-control-input" id="customSwitchAnimated">
+  <label class="custom-control-label" for="customSwitchAnimated">toggle this switch element</label>
+</div>
 {% endexample %}
 
 ### Select menu

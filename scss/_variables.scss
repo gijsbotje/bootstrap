@@ -62,14 +62,14 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$primary:       #08A699 !default;
-$secondary:     #DEDEDE !default;
-$success:       #2DBE80 !default;
-$info:          #46AEEF !default;
-$warning:       #F49B0C !default;
-$danger:        #E54E4E !default;
-$light:         #F8F9FA !default;
-$dark:          #333333 !default;
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
@@ -467,6 +467,10 @@ $custom-checkbox-indicator-indeterminate-box-shadow: none !default;
 
 $custom-radio-indicator-border-radius:          50% !default;
 $custom-radio-indicator-icon-checked:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$custom-control-indicator-checked-color}'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$custom-switch-indicator-border-radius:         $custom-control-indicator-size / 2;
+$custom-switch-indicator-icon:                   str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$custom-control-indicator-checked-color}'/%3E%3C/svg%3E"), "#", "%23") !default;
+$custom-switch-width:                           $custom-control-indicator-size * 1.75;
 
 $custom-select-padding-y:           .375rem !default;
 $custom-select-padding-x:          .75rem !default;
